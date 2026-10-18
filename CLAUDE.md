@@ -1,8 +1,9 @@
 # otto-the-robot
 
-**Otto** (*Observe, Think, Then Operate*): a ROS 2 robot. First mission: a store robot that delivers
-while staying out of people's way (was stealth past red robots; reframed 2026-10-17, see
-[docs/roadmap.md](docs/roadmap.md)). Named for the robot, not the mission, so it can
+**Otto** (*Observe, Think, Then Operate*): a ROS 2 robot. First mission: red-team his own defense.
+Red patrol robots with detection cones guard a goal (his defense); Otto (blue) tries to reach it
+unseen (his attack), and each attack that works hardens the defense. See
+[docs/roadmap.md](docs/roadmap.md). Named for the robot, not the mission, so it can
 grow into something else.
 
 ## Read first
@@ -20,8 +21,8 @@ Claude). The idea's history and his first approaches are in the hub:
 
 ## This project
 
-- **Skill he's building here:** planning around moving people (red), modeling their behavior,
-  the scoring (time vs in-the-way vs blocked), and the ROS 2 nodes that run it. He writes that, and the
+- **Skill he's building here:** planning against moving detectors, modeling red's behavior,
+  designing the defense, the scoring (time vs detection vs caught), and the ROS 2 nodes that run it. He writes that, and the
   design is his.
 - **Fair game for me:** ROS 2 / Gazebo install and environment fights, Docker, CI, launch-file
   boilerplate he isn't learning from, plotting throwaway results.

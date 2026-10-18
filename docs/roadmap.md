@@ -5,24 +5,27 @@ yours:** where an assignment says *your call*, nobody has decided yet, and that'
 
 Due dates are blank on purpose. Fill one in when you start an assignment, not before.
 
-## The story
+## The story: red-teaming your own defense
 
-Changed 2026-10-17: sneaking past someone is adversarial, and he didn't like that mindset. The math
-stays the same; the story is now **considerate**. Otto is a store robot that delivers or cleans and
-stays out of people's way. The inspiration is QuikTrip's floor cleaner, which moves too slowly for
-a place full of people moving at walking speed.
+Settled 2026-10-17, after trying stealth (didn't like the no-cooperation mindset) and a
+considerate store robot (a chore, no stakes). **You build both sides.** The patrol is your
+defense. Otto is your attacker, built to find the holes in that defense so you can close them.
+The sneaking is real and the risk is real, and the point is to make the defense better: the
+same thing you liked about red-teaming at work.
 
 | Label | Means |
 | --- | --- |
-| **Blue** | Otto |
-| **Red** | people walking their routes (staff, shoppers) |
-| **Cone** | the space a person is looking at or about to walk into |
-| **In the way** (was "detected") | Otto is inside someone's cone |
-| **Blocked** (was "caught") | Otto stops someone or forces them to step around it |
+| **Red** | the patrol: your defense |
+| **Blue** | Otto: your attacker |
+| **Detected** | Otto is inside a patrol robot's cone |
+| **Caught** | your call (HW3) |
 
-Red doesn't share its plans, so Otto still has to observe and predict. Delivering is
-start-to-goal, which is what this roadmap builds. Cleaning means covering the whole floor, which is
-a different planning problem (coverage). Treat it as a later variant.
+Heads up: in security, the *red team* is the attacker and the *blue team* is the defense. Your
+colors are the other way around. Swapping them is your call.
+
+**The loop:** attack until it beats the defense → harden the defense (routes, timing, cone
+placement) → attack again. Every attack HW below ends with a **Harden** step: change the defense
+so that attack stops working, and rerun the earlier attacks against the new defense.
 
 ## What the class gave you, and what can be rebuilt
 
@@ -45,7 +48,7 @@ watch: Gazebo running, a plot, a video.
 
 ---
 
-## HW1: Red on its route
+## HW1: Red on patrol
 
 **Given:** one TurtleBot in the sandbox world.
 **Do:** drive a red robot along a predetermined path, forever.
@@ -64,13 +67,13 @@ or third robot under its own namespace.
 ## HW2: The cone
 
 **Given:** red's pose and blue's pose.
-**Do:** decide whether blue is in red's way.
+**Do:** decide whether blue is detected.
 **Turn in:** a detector node that publishes the result, plus the cone drawn in RViz as a marker.
 
 Your calls:
 - Cone range and half-angle.
 - Do walls block the cone (line of sight), or is it pure geometry?
-- Is "in the way" on/off, or does it build up the longer blue stays there?
+- Is detection on/off, or does it build up the longer blue stays in view?
 
 **Due:** ____
 
@@ -81,8 +84,8 @@ same way.
 **Turn in:** a script that takes one run (a rosbag) and prints one scoreboard row.
 
 Your calls:
-- What "blocked" means, and how it differs from "in the way".
-- How time trades off against being in the way. How much is tolerable?
+- What "caught" means, and how it differs from "detected".
+- How time trades off against detection. How much detection is tolerable?
 - The fixed scenario set every attempt runs on: start, goal, red paths, how many runs.
 
 **Due:** ____
@@ -106,6 +109,8 @@ The open question from the hub note comes due here: is a blocked cell blocked fo
 at certain times? Your answer decides whether this stays a 2D planner or becomes a planner over
 space and time.
 
+**Harden:** change the defense until this attack stops working; rerun every earlier attack.
+
 **Due:** ____
 
 ## HW6: Observe first (your approach 1)
@@ -118,6 +123,8 @@ beats HW5.
 Your calls: how blue detects red (2022 lidar object detection carries over), how long to watch,
 and what to do when red breaks the pattern. The lidar range answer matters most here.
 
+**Harden:** change the defense until this attack stops working; rerun every earlier attack.
+
 **Due:** ____
 
 ## HW7: Scout (your approach 2, optional)
@@ -125,17 +132,21 @@ and what to do when red breaks the pattern. The lidar range answer matters most 
 **Do:** a second blue robot scouts, and the main blue uses what it reports.
 **Turn in:** a scoreboard row. Is the scout worth its cost?
 
+**Harden:** change the defense until this attack stops working; rerun every earlier attack.
+
 **Due:** ____
 
-## Final project: Round trip
+## Final project: Rescue
 
-Deliver, then return to base, with both legs out of the way (formerly the rescue variant). Same scoreboard.
+Reach the goal, then return, both legs undetected. Same scoreboard.
 
 ---
 
 ## Scoreboard
 
-One row per attempt, all on the same scenario set (HW3). The column names come from HW3.
+One row per attack × defense pairing, all on the same scenario set (HW3). The column names
+come from HW3. Once you've hardened the defense, rerun the old attacks against it: a defense
+that only stops the newest attack hasn't been hardened.
 
-| Date | Attempt | Scenario set | ... | Notes |
+| Date | Attack | Defense | Scenario set | ... | Notes |
 | --- | --- | --- | --- | --- |

@@ -34,15 +34,17 @@ rescue. Design questions are left as "your call", and due dates are blank for hi
 place of classmates there's a scoreboard against baselines. Workspace: repo root is the colcon
 workspace, packages in `src/` (his call; setup §5).
 
-**Reframed (same night):** first he asked how the 6 m symmetric lidar fits a real scenario. Then
-he dropped sneaking: "the idea behind sneaking means no cooperation, and i don't like that
-mindset." New story: a considerate store robot (delivery, or cleaning later), inspired by
-QuikTrip's floor cleaner, which is too slow for people moving at walking speed. Red = people on
-routes, "detected" → in the way, "caught" → blocked. That matches his 2022 note that a slower blue
-has to out-know red. Updated: the roadmap's story section and wording, README, CLAUDE.md. **Not
-updated:** the hub idea note (nosv1 `ideas/stealth-goal-seeker.md`). Open for HW2: with
-symmetric 6 m sensing, what makes the cone a cone (people looking forward?), and is Otto slower
-than people by design?
+**Reframed (same night), and settled:** he asked how symmetric 6 m sensing fits a real scenario,
+then went through three stories. (1) Stealth: dropped, because "sneaking means no cooperation"
+and he didn't like that mindset. (2) Considerate store robot (QuikTrip's floor cleaner is too slow
+for people): dropped, "these are just chores", with no stakes. (3) A game (tag): "but why are we
+playing tag." **Landed on red-teaming his own defense**, which he enjoyed at work. He builds both
+the patrol (defense) and Otto (attack); each attack that works hardens the defense. Roadmap: the
+story section was rewritten, every attack HW now ends with a Harden step, and the scoreboard is
+attack × defense. README and CLAUDE.md were updated to match. Flagged and open: security
+convention has red = attacker, the opposite of his colors. **Not updated:** the hub idea note
+(nosv1 `ideas/stealth-goal-seeker.md`). Open for HW2: with symmetric 6 m sensing, what makes the
+cone a cone?
 
 ## Next
 
