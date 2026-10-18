@@ -2,7 +2,7 @@
 
 **Otto** — *Observe, Think, Then Operate.* A ROS 2 robot.
 
-First mission: reach a goal without being seen by patrolling robots with detection cones, as fast
-as possible.
+First mission: a store robot that delivers quickly while staying out of the way of people walking
+their routes.
 
 Work in progress.

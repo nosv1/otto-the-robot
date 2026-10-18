@@ -34,6 +34,16 @@ rescue. Design questions are left as "your call", and due dates are blank for hi
 place of classmates there's a scoreboard against baselines. Workspace: repo root is the colcon
 workspace, packages in `src/` (his call; setup §5).
 
+**Reframed (same night):** first he asked how the 6 m symmetric lidar fits a real scenario. Then
+he dropped sneaking: "the idea behind sneaking means no cooperation, and i don't like that
+mindset." New story: a considerate store robot (delivery, or cleaning later), inspired by
+QuikTrip's floor cleaner, which is too slow for people moving at walking speed. Red = people on
+routes, "detected" → in the way, "caught" → blocked. That matches his 2022 note that a slower blue
+has to out-know red. Updated: the roadmap's story section and wording, README, CLAUDE.md. **Not
+updated:** the hub idea note (nosv1 `ideas/stealth-goal-seeker.md`). Open for HW2: with
+symmetric 6 m sensing, what makes the cone a cone (people looking forward?), and is Otto slower
+than people by design?
+
 ## Next
 
 - Start HW1 in [roadmap.md](roadmap.md) and write its due date.

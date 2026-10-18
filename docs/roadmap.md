@@ -5,6 +5,25 @@ yours:** where an assignment says *your call*, nobody has decided yet, and that'
 
 Due dates are blank on purpose. Fill one in when you start an assignment, not before.
 
+## The story
+
+Changed 2026-10-17: sneaking past someone is adversarial, and he didn't like that mindset. The math
+stays the same; the story is now **considerate**. Otto is a store robot that delivers or cleans and
+stays out of people's way. The inspiration is QuikTrip's floor cleaner, which moves too slowly for
+a place full of people moving at walking speed.
+
+| Label | Means |
+| --- | --- |
+| **Blue** | Otto |
+| **Red** | people walking their routes (staff, shoppers) |
+| **Cone** | the space a person is looking at or about to walk into |
+| **In the way** (was "detected") | Otto is inside someone's cone |
+| **Blocked** (was "caught") | Otto stops someone or forces them to step around it |
+
+Red doesn't share its plans, so Otto still has to observe and predict. Delivering is
+start-to-goal, which is what this roadmap builds. Cleaning means covering the whole floor, which is
+a different planning problem (coverage). Treat it as a later variant.
+
 ## What the class gave you, and what can be rebuilt
 
 | Class had | Here |
@@ -26,7 +45,7 @@ watch: Gazebo running, a plot, a video.
 
 ---
 
-## HW1: Red on patrol
+## HW1: Red on its route
 
 **Given:** one TurtleBot in the sandbox world.
 **Do:** drive a red robot along a predetermined path, forever.
@@ -45,13 +64,13 @@ or third robot under its own namespace.
 ## HW2: The cone
 
 **Given:** red's pose and blue's pose.
-**Do:** decide whether blue is detected.
+**Do:** decide whether blue is in red's way.
 **Turn in:** a detector node that publishes the result, plus the cone drawn in RViz as a marker.
 
 Your calls:
 - Cone range and half-angle.
 - Do walls block the cone (line of sight), or is it pure geometry?
-- Is detection on/off, or does it build up the longer blue stays in view?
+- Is "in the way" on/off, or does it build up the longer blue stays there?
 
 **Due:** ____
 
@@ -62,8 +81,8 @@ same way.
 **Turn in:** a script that takes one run (a rosbag) and prints one scoreboard row.
 
 Your calls:
-- What "caught" means, and how it differs from "detected".
-- How time trades off against detection. How much detection is tolerable?
+- What "blocked" means, and how it differs from "in the way".
+- How time trades off against being in the way. How much is tolerable?
 - The fixed scenario set every attempt runs on: start, goal, red paths, how many runs.
 
 **Due:** ____
@@ -108,9 +127,9 @@ and what to do when red breaks the pattern. The lidar range answer matters most 
 
 **Due:** ____
 
-## Final project: Rescue
+## Final project: Round trip
 
-Reach the goal, then return, both legs undetected. Same scoreboard.
+Deliver, then return to base, with both legs out of the way (formerly the rescue variant). Same scoreboard.
 
 ---
 
