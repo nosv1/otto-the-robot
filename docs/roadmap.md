@@ -22,8 +22,7 @@ watch: Gazebo running, a plot, a video.
 
 - [setup.md](setup.md) §4: the Nav2 Goal drive check.
 - [setup.md](setup.md) §5: where the workspace lives, and the first package name.
-- The lidar range question: the sim's LDS goes to 20 m, a real LDS-01 to about 3.5 m. Which one
-  are you designing for? (`<max>` in a copy of `gz_waffle.sdf.xacro`.)
+- Lidar range: **decided, 6 m for both teams** (`<max>` in a copy of `gz_waffle.sdf.xacro`).
 
 ---
 
