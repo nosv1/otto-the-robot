@@ -59,6 +59,9 @@ not warm-ups.
 Names are Claude's, at his request, cut from five to two. **Nodes in C++** (his call: "keeps me
 from lazy understanding old code"); the 2022 Python is a reference to port.
 
+**Wrap-up (23:3x):** package skeletons `src/otto` and `src/otto_sim` (empty, both build), READMEs in
+`src/`, `.clang-format` copied from 12_months, MIT license. Hub (nosv1) updated and pushed.
+
 ## Next
 
 - Depot/warehouse worlds pull models from Gazebo Fuel, and nothing is cached yet (`~/.gz/fuel` is
@@ -67,4 +70,5 @@ from lazy understanding old code"); the 2022 Python is a reference to port.
   `gz fuel download -u https://fuel.gazebosim.org/1.0/OpenRobotics/models/Depot`, then add a
   setup.md gotcha. If it's still down, check the gazebosim GitHub for an issue.
 - Pick the map (depot or warehouse) and get the Waffle spawning in it.
-- Start HW1 in [roadmap.md](roadmap.md) and write its due date.
+- Start HW1 in [roadmap.md](roadmap.md) and write its due date: the patrol node in
+  `src/otto/src/blue/`, adding `rclcpp` to the package. It runs in the sandbox until the depot works.
