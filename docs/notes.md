@@ -24,8 +24,7 @@ vendor bin dirs for packages that were installed when it ran). §4: launched the
 the Nav2 sim only ships the **Waffle** (2022 was the Burger, because the lab had real Burgers).
 Same LDS lidar (`/scan`, 360 samples, 5 Hz), plus a depth camera he doesn't plan to use.
 **The sim lidar max is 20 m against about 3.5 m on a real LDS-01.** He called that a huge
-difference; which range he designs for is still open. Not confirmed: the §4 Nav2 Goal drive
-check.
+difference; which range he designs for is still open. The §4 Nav2 Goal drive check passed.
 
 He asked for a roadmap framed as homework, and wondered whether his old motivation came from
 the class itself: comparing results, shared adversity. [roadmap.md](roadmap.md) written
@@ -35,6 +34,6 @@ place of classmates there's a scoreboard against baselines.
 
 ## Next
 
-- Finish setup §4 (Nav2 Goal check) and §5 (workspace location).
+- Finish setup §5 (workspace location).
 - Decide the lidar range: 20 m sim or 3.5 m real.
 - Start HW1 in [roadmap.md](roadmap.md) and write its due date.

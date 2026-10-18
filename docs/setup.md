@@ -30,7 +30,7 @@ curl -L -o /tmp/ros2-apt-source.deb "https://github.com/ros-infrastructure/ros-a
 sudo dpkg -i /tmp/ros2-apt-source.deb
 ```
 
-- [ ] **Check:** `apt-cache policy ros-jazzy-desktop` shows a candidate version (not `(none)`)
+- [x] **Check:** `apt-cache policy ros-jazzy-desktop` shows a candidate version (not `(none)`)
 
 ## 2. ROS 2 Jazzy
 
@@ -61,7 +61,7 @@ not to work as is.
 sudo apt install ros-jazzy-ros-gz
 ```
 
-- [ ] **Check:** `gz sim shapes.sdf` opens a window with shapes in it. If it's black, or very
+- [x] **Check:** `gz sim shapes.sdf` opens a window with shapes in it. If it's black, or very
       slow, that's WSLg rendering; stop and ask before fiddling.
 
 ## 4. A robot in a world
@@ -73,7 +73,7 @@ The Nav2 packages ship a TurtleBot 3 for modern Gazebo (`nav2_minimal_tb*`). The
 sudo apt install ros-jazzy-navigation2 ros-jazzy-nav2-bringup ros-jazzy-nav2-minimal-tb\*
 ```
 
-- [ ] **Check:** `ros2 launch nav2_bringup tb3_simulation_launch.py headless:=False`. Gazebo and
+- [x] **Check:** `ros2 launch nav2_bringup tb3_simulation_launch.py headless:=False`. Gazebo and
       RViz open with a TurtleBot 3. In RViz: **2D Pose Estimate** where the robot is, then
       **Nav2 Goal** somewhere else; it drives there.
 
