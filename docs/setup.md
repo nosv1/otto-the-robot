@@ -95,6 +95,8 @@ source install/setup.bash            # each new shell, after /opt/ros/jazzy
 
 Run `colcon build` from anywhere else and it makes a second `build/`/`install/` there.
 
+Several terminals at once: [tmux.md](tmux.md).
+
 ## Gotchas carried over from 12_months
 
 - Work in `~/`, never `/mnt/c/` (slow, breaks file watching and `colcon`).
