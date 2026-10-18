@@ -84,22 +84,19 @@ planner against red's cones is the part you write.
 ## 5. Your workspace
 
 **Decided 2026-10-17: the repo root is the colcon workspace.** Packages go in `src/`; `build/`,
-`install/`, `log/` are gitignored. Layout copies Nav2's bringup/sim split. Names (Claude's, at
-his request):
+`install/`, `log/` are gitignored. Two packages (Claude's names, at his request; cut down from five because 2v1 doesn't need more):
 
 | Package | Holds | Build |
 | --- | --- | --- |
-| `otto_bringup` | launch, params, maps, rviz | ament_cmake |
-| `otto_sim` | worlds, edited Waffle, ros_gz bridge configs | ament_cmake |
-| `otto_blue` | defense: patrol, cones | ament_python |
-| `otto_red` | attack: Otto's planners | ament_python |
-| `otto_debrief` | scoring, scenario sets, plots | ament_python |
+| `otto_sim` | worlds, edited Waffle, ros_gz bridge configs, maps, launch, rviz | ament_cmake |
+| `otto` | all the nodes, in `otto/blue/` (defense), `otto/red/` (attack), `otto/debrief/` (scoring) | ament_python |
 
-Make each one when an HW needs it. HW1 needs only `otto_blue`.
+The sim/code split keeps Gazebo out of the node package, and it's the split that pays off on real
+hardware. HW1 needs only `otto`.
 
 ```bash
 cd ~/otto-the-robot
-ros2 pkg create --build-type ament_python --destination-directory src <name>
+ros2 pkg create --build-type ament_python --destination-directory src otto
 colcon build --symlink-install       # always from the repo root
 source install/setup.bash            # each new shell, after /opt/ros/jazzy
 ```
