@@ -84,7 +84,18 @@ planner against red's cones is the part you write.
 ## 5. Your workspace
 
 **Decided 2026-10-17: the repo root is the colcon workspace.** Packages go in `src/`; `build/`,
-`install/`, `log/` are gitignored. Package names are still your call.
+`install/`, `log/` are gitignored. Layout copies Nav2's bringup/sim split. Names (Claude's, at
+his request):
+
+| Package | Holds | Build |
+| --- | --- | --- |
+| `otto_bringup` | launch, params, maps, rviz | ament_cmake |
+| `otto_sim` | worlds, edited Waffle, ros_gz bridge configs | ament_cmake |
+| `otto_blue` | defense: patrol, cones | ament_python |
+| `otto_red` | attack: Otto's planners | ament_python |
+| `otto_debrief` | scoring, scenario sets, plots | ament_python |
+
+Make each one when an HW needs it. HW1 needs only `otto_blue`.
 
 ```bash
 cd ~/otto-the-robot
