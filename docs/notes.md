@@ -13,6 +13,11 @@ His starting points (from the hub idea note):
 - Open question he was left with: in his planner, is a blocked cell blocked forever, or only at
   certain times?
 
+**2026-10-17:** [docs/setup.md](setup.md) written (Claude): install checklist for ROS 2 Jazzy +
+Gazebo Harmonic + Nav2 TurtleBot 3 sim on the existing  distro, with a check per
+stage and the sources fetched. Nothing installed yet; repo cloned to  in WSL.
+
 ## Next
 
+- Work through [setup.md](setup.md) top to bottom.
 - His call: the first milestone, and what "done" means for it.
