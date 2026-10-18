@@ -23,6 +23,9 @@ same thing you liked about red-teaming at work.
 Heads up: in security, the *red team* is the attacker and the *blue team* is the defense. Your
 colors are the other way around. Swapping them is your call.
 
+**Scope: 1v1 or 2v1.** One Otto, always. One or two patrol robots. Anything bigger waits until
+this works.
+
 **The loop:** attack until it beats the defense → harden the defense (routes, timing, cone
 placement) → attack again. Every attack HW below ends with a **Harden** step: change the defense
 so that attack stops working, and rerun the earlier attacks against the new defense.
@@ -127,14 +130,9 @@ and what to do when red breaks the pattern. The lidar range answer matters most 
 
 **Due:** ____
 
-## HW7: Scout (your approach 2, optional)
+## Parked: Scout (your approach 2)
 
-**Do:** a second blue robot scouts, and the main blue uses what it reports.
-**Turn in:** a scoreboard row. Is the scout worth its cost?
-
-**Harden:** change the defense until this attack stops working; rerun every earlier attack.
-
-**Due:** ____
+A scout means a second attacker, which is outside the 1v1/2v1 scope. Revisit once HW6 works.
 
 ## Final project: Rescue
 

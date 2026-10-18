@@ -44,7 +44,9 @@ story section was rewritten, every attack HW now ends with a Harden step, and th
 attack × defense. README and CLAUDE.md were updated to match. Flagged and open: security
 convention has red = attacker, the opposite of his colors. **Not updated:** the hub idea note
 (nosv1 `ideas/stealth-goal-seeker.md`). Open for HW2: with symmetric 6 m sensing, what makes the
-cone a cone?
+cone a cone? **Scope set by him: 1v1 or 2v1, never more than one Otto any time soon**; the
+scout (HW7) is parked. Color swap (blue = his defense, red = Otto, matching security convention)
+suggested; he hasn't answered.
 
 ## Next
 
