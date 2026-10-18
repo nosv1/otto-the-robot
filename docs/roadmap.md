@@ -71,7 +71,7 @@ Your calls:
 - Does blue repeat exactly, with jitter, or randomly? This choice is the difficulty knob for every
   approach that observes blue first.
 
-Reuse from 2022: path following, PID. Fair game for Claude: the launch file that spawns a second
+Port from 2022 (Python → C++, rewrite, don't copy): path following, PID. Fair game for Claude: the launch file that spawns a second
 or third robot under its own namespace.
 
 **Due:** ____
@@ -147,7 +147,7 @@ space and time.
 **Turn in:** your model of blue, the planner, a scoreboard row, and a run where watching first
 beats HW5.
 
-Your calls: how red detects blue (2022 lidar object detection carries over), how long to watch,
+Your calls: how red detects blue (port the 2022 lidar object detection), how long to watch,
 and what to do when blue breaks the pattern. The lidar range answer matters most here.
 
 **Harden:** change the defense until this attack stops working; rerun every earlier attack.

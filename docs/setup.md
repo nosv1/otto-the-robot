@@ -89,15 +89,19 @@ planner against red's cones is the part you write.
 | Package | Holds | Build |
 | --- | --- | --- |
 | `otto_sim` | worlds, edited Waffle, ros_gz bridge configs, maps, launch, rviz | ament_cmake |
-| `otto` | all the nodes, in `otto/blue/` (defense), `otto/red/` (attack), `otto/debrief/` (scoring) | ament_python |
+| `otto` | all the nodes, **C++**: `src/blue/` (defense), `src/red/` (attack), `src/debrief/` (scoring) | ament_cmake |
 
 The sim/code split keeps Gazebo out of the node package, and it's the split that pays off on real
 hardware. HW1 needs only `otto`.
 
+**C++, decided 2026-10-17 (his call):** "keeps me from lazy understanding old code." The 2022
+Python is a reference to port, not to copy. `CMAKE_EXPORT_COMPILE_COMMANDS` writes
+`build/<pkg>/compile_commands.json` for the editor's C++ IntelliSense.
+
 ```bash
 cd ~/otto-the-robot
-ros2 pkg create --build-type ament_python --destination-directory src otto
-colcon build --symlink-install       # always from the repo root
+ros2 pkg create --build-type ament_cmake --destination-directory src otto
+colcon build --symlink-install --cmake-args -DCMAKE_EXPORT_COMPILE_COMMANDS=ON   # repo root
 source install/setup.bash            # each new shell, after /opt/ros/jazzy
 ```
 

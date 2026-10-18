@@ -55,6 +55,10 @@ worlds ship with the TB4 sim) and doesn't mind editing robot models to raise spe
 "it's for fun anyways." Flagged: ratios matter more than absolutes. Also: he wants the deep end,
 not warm-ups.
 
+**Packages and language:** two packages, `otto_sim` (ament_cmake, assets) and `otto` (all nodes).
+Names are Claude's, at his request, cut from five to two. **Nodes in C++** (his call: "keeps me
+from lazy understanding old code"); the 2022 Python is a reference to port.
+
 ## Next
 
 - Depot/warehouse worlds pull models from Gazebo Fuel, and nothing is cached yet (`~/.gz/fuel` is
