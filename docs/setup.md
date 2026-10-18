@@ -47,7 +47,7 @@ echo 'source /opt/ros/jazzy/setup.bash' >> ~/.bashrc
 source ~/.bashrc
 ```
 
-- [ ] **Check:** two terminals. One: `ros2 run demo_nodes_cpp talker`. Other:
+- [x] **Check:** two terminals. One: `ros2 run demo_nodes_cpp talker`. Other:
       `ros2 run demo_nodes_py listener`. The listener prints what the talker says. Ctrl+C both.
 
 ## 3. Gazebo Harmonic (through ROS)

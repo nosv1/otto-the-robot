@@ -17,7 +17,7 @@ His starting points (from the hub idea note):
 Gazebo Harmonic + Nav2 TurtleBot 3 sim on the existing `Ubuntu-24.04` distro, with a check per
 stage and the sources fetched. Nothing installed yet; repo cloned to `~/otto-the-robot` in WSL.
 
-**2026-10-17 (evening):** setup §1–3 done. ROS 2 Jazzy and Gazebo Harmonic are installed;
+**2026-10-17 (evening):** setup §1–4 done (§2 talker/listener confirmed later). ROS 2 Jazzy and Gazebo Harmonic are installed;
 `gz sim shapes.sdf` works. Two snags, neither one a checklist bug: he skipped the `apt update`
 after adding the ROS source, and `gz` wasn't on PATH until he re-sourced (`setup.bash` only adds
 vendor bin dirs for packages that were installed when it ran). §4: launched the TB3 sim, and
