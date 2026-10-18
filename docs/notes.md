@@ -50,6 +50,12 @@ patrol), red = Otto (the attacker),** matching security convention. Earlier entr
 old colors. Each HW now opens with a Mission: Impossible style brief (his idea: "lighten the
 mood", and future readers might enjoy it).
 
+**Map and models:** he wants a more complex map than the sandbox (depot or warehouse; those
+worlds ship with the TB4 sim) and doesn't mind editing robot models to raise speed and sensing,
+"it's for fun anyways." Flagged: ratios matter more than absolutes. Also: he wants the deep end,
+not warm-ups.
+
 ## Next
 
+- Pick the map (depot or warehouse) and get the Waffle spawning in it.
 - Start HW1 in [roadmap.md](roadmap.md) and write its due date.

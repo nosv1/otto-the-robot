@@ -48,6 +48,12 @@ watch: Gazebo running, a plot, a video.
 - [setup.md](setup.md) §4: the Nav2 Goal drive check.
 - [setup.md](setup.md) §5: where the workspace lives, and the first package name.
 - Lidar range: **decided, 6 m for both teams** (`<max>` in a copy of `gz_waffle.sdf.xacro`).
+- Map: **something more complex than the sandbox** (his call, for fun). Candidates: `depot` (about
+  30 × 15 m) or `warehouse` (about 30 × 50 m). Their worlds are in `nav2_minimal_tb4_sim/worlds/`
+  and their maps are in `nav2_bringup/maps/`. The Waffle in those worlds is untested.
+- Robot models: edit **copies** in the repo, not the installed files. The sim caps the Waffle at
+  0.46 m/s and 1.9 rad/s (`max_linear_velocity` in `gz_waffle.sdf.xacro`). Pick the ratios
+  first (warning time = range ÷ speed, Otto's speed vs the patrol's), then the numbers.
 
 ---
 
