@@ -1,0 +1,6 @@
+# colcon output (repo root is the workspace)
+build/
+install/
+log/
+
+__pycache__/

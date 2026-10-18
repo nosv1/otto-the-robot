@@ -81,11 +81,19 @@ That run uses Nav2's planner, not yours. It's here only to prove the sim, robot,
 work. Whether Otto uses any of Nav2 later (maps, localization, `slam_toolbox`) is your call; the
 planner against red's cones is the part you write.
 
-## 5. Your workspace (your call)
+## 5. Your workspace
 
-Not decided: where the colcon workspace lives (the repo root, or `~/otto_ws/src/otto-the-robot`),
-and package names. Pick when you write the first node. Commands you'll need either way:
-`ros2 pkg create`, `colcon build --symlink-install`, `source install/setup.bash`.
+**Decided 2026-10-17: the repo root is the colcon workspace.** Packages go in `src/`; `build/`,
+`install/`, `log/` are gitignored. Package names are still your call.
+
+```bash
+cd ~/otto-the-robot
+ros2 pkg create --build-type ament_python --destination-directory src <name>
+colcon build --symlink-install       # always from the repo root
+source install/setup.bash            # each new shell, after /opt/ros/jazzy
+```
+
+Run `colcon build` from anywhere else and it makes a second `build/`/`install/` there.
 
 ## Gotchas carried over from 12_months
 

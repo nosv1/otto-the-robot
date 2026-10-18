@@ -30,10 +30,10 @@ He asked for a roadmap framed as homework, and wondered whether his old motivati
 the class itself: comparing results, shared adversity. [roadmap.md](roadmap.md) written
 (Claude): HW1 red patrol → HW2 cone → HW3 score → HW4 baselines → HW5–7 his three approaches →
 rescue. Design questions are left as "your call", and due dates are blank for him to fill. In
-place of classmates there's a scoreboard against baselines.
+place of classmates there's a scoreboard against baselines. Workspace: repo root is the colcon
+workspace, packages in `src/` (his call; setup §5).
 
 ## Next
 
-- Finish setup §5 (workspace location).
 - Decide the lidar range: 20 m sim or 3.5 m real.
 - Start HW1 in [roadmap.md](roadmap.md) and write its due date.
