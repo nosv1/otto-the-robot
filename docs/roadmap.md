@@ -53,6 +53,9 @@ watch: Gazebo running, a plot, a video.
 
 ## HW1: Blue on patrol
 
+> Good evening. Before anyone can break in, someone has to stand guard. Your mission, should
+> you choose to accept it: put a blue patrol robot on a route and keep it walking. Forever.
+
 **Given:** one TurtleBot in the sandbox world.
 **Do:** drive a blue patrol robot along a predetermined path, forever.
 **Turn in:** a node, plus a plot of blue's path from `/odom` over several laps.
@@ -69,6 +72,9 @@ or third robot under its own namespace.
 
 ## HW2: The cone
 
+> A guard who can't see is just furniture. Your mission: give the patrol eyes, and decide exactly
+> what it takes to be seen.
+
 **Given:** blue's pose and red's pose.
 **Do:** decide whether red is detected.
 **Turn in:** a detector node that publishes the result, plus the cone drawn in RViz as a marker.
@@ -81,6 +87,9 @@ Your calls:
 **Due:** ____
 
 ## HW3: The score
+
+> Every operation gets a debrief. Your mission: decide how this one is judged *before* anyone
+> goes in, so nobody can grade on a curve afterward.
 
 **Do:** define the score *before* you write a planner, so every later attempt is measured the
 same way.
@@ -95,6 +104,9 @@ Your calls:
 
 ## HW4: Baselines (the classmates)
 
+> Send in the rookies. Your mission: run Ottos with no tricks at all and record how fast they get
+> spotted. This is the bar every real plan has to clear.
+
 **Do:** run two red Ottos (one at a time) that don't try to be smart, and score them.
 1. Straight to the goal, ignoring blue. Use Nav2 or your 2022 A*.
 2. A second naive Otto you pick.
@@ -104,6 +116,9 @@ Your calls:
 **Due:** ____
 
 ## HW5: Cone as an obstacle (your approach 3)
+
+> Otto, your first real assignment. The guards' line of sight is a wall you can't walk through.
+> Go around it. If you're spotted, the agency will deny all knowledge of your planner.
 
 **Do:** red treats blue's currently known cone as an obstacle and replans as it moves.
 **Turn in:** a planner node, its scoreboard row, and a video of a run.
@@ -117,6 +132,9 @@ space and time.
 **Due:** ____
 
 ## HW6: Observe first (your approach 1)
+
+> Patience, Otto. Watch the guards, learn their rhythm, and move when they look away. Recon
+> first, then the run.
 
 **Do:** red watches blue before committing, learns the pattern, and plans against where blue
 *will be*.
@@ -135,6 +153,9 @@ and what to do when blue breaks the pattern. The lidar range answer matters most
 A scout means a second attacker, which is outside the 1v1/2v1 scope. Revisit once HW6 works.
 
 ## Final project: Rescue
+
+> The big one. Get in, reach the goal, and get out, unseen both ways. As always, this message will
+> self-destruct after `colcon build`.
 
 Reach the goal, then return, both legs undetected. Same scoreboard.
 

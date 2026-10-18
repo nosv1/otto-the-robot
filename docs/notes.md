@@ -47,7 +47,8 @@ convention has red = attacker, the opposite of his colors. **Not updated:** the 
 cone a cone? **Scope set by him: 1v1 or 2v1, never more than one Otto any time soon**; the
 scout (HW7) is parked. **Colors swapped (his call): blue = his defense (the
 patrol), red = Otto (the attacker),** matching security convention. Earlier entries above use the
-old colors.
+old colors. Each HW now opens with a Mission: Impossible style brief (his idea: "lighten the
+mood", and future readers might enjoy it).
 
 ## Next
 
