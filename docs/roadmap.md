@@ -15,13 +15,13 @@ same thing you liked about red-teaming at work.
 
 | Label | Means |
 | --- | --- |
-| **Red** | the patrol: your defense |
-| **Blue** | Otto: your attacker |
+| **Blue** | the patrol: your defense |
+| **Red** | Otto: your attacker |
 | **Detected** | Otto is inside a patrol robot's cone |
 | **Caught** | your call (HW3) |
 
-Heads up: in security, the *red team* is the attacker and the *blue team* is the defense. Your
-colors are the other way around. Swapping them is your call.
+Colors follow security convention: the *blue team* is the defense and the *red team* is the
+attacker.
 
 **Scope: 1v1 or 2v1.** One Otto, always. One or two patrol robots. Anything bigger waits until
 this works.
@@ -51,16 +51,16 @@ watch: Gazebo running, a plot, a video.
 
 ---
 
-## HW1: Red on patrol
+## HW1: Blue on patrol
 
 **Given:** one TurtleBot in the sandbox world.
-**Do:** drive a red robot along a predetermined path, forever.
-**Turn in:** a node, plus a plot of red's path from `/odom` over several laps.
+**Do:** drive a blue patrol robot along a predetermined path, forever.
+**Turn in:** a node, plus a plot of blue's path from `/odom` over several laps.
 
 Your calls:
 - How a "predetermined path" is represented: waypoints, a loop, timing.
-- Does red repeat exactly, with jitter, or randomly? This choice is the difficulty knob for every
-  approach that observes red first.
+- Does blue repeat exactly, with jitter, or randomly? This choice is the difficulty knob for every
+  approach that observes blue first.
 
 Reuse from 2022: path following, PID. Fair game for Claude: the launch file that spawns a second
 or third robot under its own namespace.
@@ -69,14 +69,14 @@ or third robot under its own namespace.
 
 ## HW2: The cone
 
-**Given:** red's pose and blue's pose.
-**Do:** decide whether blue is detected.
+**Given:** blue's pose and red's pose.
+**Do:** decide whether red is detected.
 **Turn in:** a detector node that publishes the result, plus the cone drawn in RViz as a marker.
 
 Your calls:
 - Cone range and half-angle.
 - Do walls block the cone (line of sight), or is it pure geometry?
-- Is detection on/off, or does it build up the longer blue stays in view?
+- Is detection on/off, or does it build up the longer red stays in view?
 
 **Due:** ____
 
@@ -89,15 +89,15 @@ same way.
 Your calls:
 - What "caught" means, and how it differs from "detected".
 - How time trades off against detection. How much detection is tolerable?
-- The fixed scenario set every attempt runs on: start, goal, red paths, how many runs.
+- The fixed scenario set every attempt runs on: start, goal, blue paths, how many runs.
 
 **Due:** ____
 
 ## HW4: Baselines (the classmates)
 
-**Do:** run two blue robots that don't try to be smart, and score them.
-1. Straight to the goal, ignoring red. Use Nav2 or your 2022 A*.
-2. A second naive blue you pick.
+**Do:** run two red Ottos (one at a time) that don't try to be smart, and score them.
+1. Straight to the goal, ignoring blue. Use Nav2 or your 2022 A*.
+2. A second naive Otto you pick.
 
 **Turn in:** their rows on the scoreboard. Everything after this has to beat them.
 
@@ -105,7 +105,7 @@ Your calls:
 
 ## HW5: Cone as an obstacle (your approach 3)
 
-**Do:** blue treats red's currently known cone as an obstacle and replans as it moves.
+**Do:** red treats blue's currently known cone as an obstacle and replans as it moves.
 **Turn in:** a planner node, its scoreboard row, and a video of a run.
 
 The open question from the hub note comes due here: is a blocked cell blocked forever, or only
@@ -118,13 +118,13 @@ space and time.
 
 ## HW6: Observe first (your approach 1)
 
-**Do:** blue watches red before committing, learns the pattern, and plans against where red
+**Do:** red watches blue before committing, learns the pattern, and plans against where blue
 *will be*.
-**Turn in:** your model of red, the planner, a scoreboard row, and a run where watching first
+**Turn in:** your model of blue, the planner, a scoreboard row, and a run where watching first
 beats HW5.
 
-Your calls: how blue detects red (2022 lidar object detection carries over), how long to watch,
-and what to do when red breaks the pattern. The lidar range answer matters most here.
+Your calls: how red detects blue (2022 lidar object detection carries over), how long to watch,
+and what to do when blue breaks the pattern. The lidar range answer matters most here.
 
 **Harden:** change the defense until this attack stops working; rerun every earlier attack.
 
