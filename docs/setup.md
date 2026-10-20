@@ -81,6 +81,19 @@ That run uses Nav2's planner, not yours. It's here only to prove the sim, robot,
 work. Whether Otto uses any of Nav2 later (maps, localization, `slam_toolbox`) is your call; the
 planner against red's cones is the part you write.
 
+Worlds like the depot pull their models from [Gazebo Fuel](https://app.gazebosim.org)
+on first launch. Download ahead of time so a launch doesn't stall on the network
+(cached in `~/.gz/fuel`):
+
+```bash
+gz fuel download -u https://fuel.gazebosim.org/1.0/OpenRobotics/models/Depot
+```
+
+- [x] **Check:** `ls ~/.gz/fuel/fuel.gazebosim.org/openrobotics/models/depot` lists a
+      version folder (2026-10-20: version 6, 101 MB). Fuel's API was down (502,
+      server-wide) on 2026-10-17; if a download fails, check
+      `curl -sI https://fuel.gazebosim.org/1.0/models` before debugging locally.
+
 ## 5. Your workspace
 
 **Decided 2026-10-17: the repo root is the colcon workspace.** Packages go in `src/`; `build/`,

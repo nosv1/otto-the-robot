@@ -64,11 +64,8 @@ from lazy understanding old code"); the 2022 Python is a reference to port.
 
 ## Next
 
-- Depot/warehouse worlds pull models from Gazebo Fuel, and nothing is cached yet (`~/.gz/fuel` is
-  missing). **Fuel's API returned 502 on 2026-10-17 at 23:15, server-wide** (the model list too;
-  the app.gazebosim.org site was up). When it's back:
-  `gz fuel download -u https://fuel.gazebosim.org/1.0/OpenRobotics/models/Depot`, then add a
-  setup.md gotcha. If it's still down, check the gazebosim GitHub for an issue.
+- Depot model downloaded from Gazebo Fuel 2026-10-20 (Fuel was back; 101 MB, cached in
+  `~/.gz/fuel`). Gotcha added to [setup.md](setup.md) §4. Warehouse models not fetched.
 - Pick the map (depot or warehouse) and get the Waffle spawning in it.
 - Start HW1 in [roadmap.md](roadmap.md) and write its due date: the patrol node in
   `src/otto/src/blue/`, adding `rclcpp` to the package. It runs in the sandbox until the depot works.
