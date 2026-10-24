@@ -62,10 +62,34 @@ from lazy understanding old code"); the 2022 Python is a reference to port.
 **Wrap-up (23:3x):** package skeletons `src/otto` and `src/otto_sim` (empty, both build), READMEs in
 `src/`, `.clang-format` copied from 12_months, MIT license. Hub (nosv1) updated and pushed.
 
+**2026-10-23 (evening, ~17:40–19:05):** HW1 started. First C++ ROS 2 node working in the sim.
+He asked for a quick start rather than writing it from memory in a new language; I pointed him to the
+Jazzy C++ pub/sub tutorial (plus parameters, quaternions, the msg API pages). He typed out the talker
+and listener (`blue`, `red`), then turned `blue` into one node with a `/cmd_vel` publisher (constant
+Twist, the Waffle circles in the sandbox) and an `/odom` subscriber that logs position. Snags,
+all his to find: `std_msgs/msg/Twist.hpp` (it's `geometry_msgs/msg/twist.hpp`), two constructors,
+and an Odometry subscription on `cmd_vel`, which crashed with `invalid allocator` because the node
+already publishes Twist there. Environment (mine): `.vscode/c_cpp_properties.json` for IntelliSense
+(`/opt/ros/jazzy/include/**` plus `build/otto/compile_commands.json`); `~/.bashrc` sources
+`install/setup.bash` with a relative path (flagged: make it absolute). `ros2 run` takes the CMake
+target name, not the file name.
+
+He raised: is blue reading its own pose cheating? Settled: no, `/odom` is its own wheel encoders
+and IMU. Ground truth or red's pose would be cheating. **Open (parked, he wasn't in a design mood):**
+patrol on `/odom` (drifts over laps) or `/amcl_pose` (lidar against the map). Lidar's other job is
+detection (HW2).
+
+**Feedback:** I slid into handing him full fixes during the debugging ("not flight instructor
+vibes"). His profile already covers it; he wants that as the single source, **always**, not a
+duplicate memory.
+
 ## Next
 
-- Depot model downloaded from Gazebo Fuel 2026-10-20 (Fuel was back; 101 MB, cached in
-  `~/.gz/fuel`). Gotcha added to [setup.md](setup.md) §4. Warehouse models not fetched.
-- Pick the map (depot or warehouse) and get the Waffle spawning in it.
-- Start HW1 in [roadmap.md](roadmap.md) and write its due date: the patrol node in
-  `src/otto/src/blue/`, adding `rclcpp` to the package. It runs in the sandbox until the depot works.
+- HW1 step 3: go to one point (yaw from the `/odom` quaternion, P on heading). Then step 4: a
+  waypoint loop, forever, and the `/odom` plot over several laps.
+- HW1 due date in [roadmap.md](roadmap.md) is still blank.
+- Uncommitted, his: `blue.cpp`, `red.cpp`, `otto` CMake/package.xml. `.vscode/` is untracked;
+  commit it or ignore it, his call.
+- `blue` sends 0.5 m/s; the real Waffle tops out around 0.26. Fine in the sim; keep both teams equal.
+- Depot model cached in `~/.gz/fuel` (2026-10-20); warehouse not fetched. Waffle in the depot is
+  still mine to set up when he says go.
