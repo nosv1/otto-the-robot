@@ -88,8 +88,8 @@ duplicate memory.
 - HW1 step 3: go to one point (yaw from the `/odom` quaternion, P on heading). Then step 4: a
   waypoint loop, forever, and the `/odom` plot over several laps.
 - HW1 due date in [roadmap.md](roadmap.md) is still blank.
-- Uncommitted, his: `blue.cpp`, `red.cpp`, `otto` CMake/package.xml. `.vscode/` is untracked;
-  commit it or ignore it, his call.
+- Uncommitted, his: `blue.cpp`, `red.cpp`, `otto` CMake/package.xml.
+  `.vscode/c_cpp_properties.json` committed (mine).
 - `blue` sends 0.5 m/s; the real Waffle tops out around 0.26. Fine in the sim; keep both teams equal.
 - Depot model cached in `~/.gz/fuel` (2026-10-20); warehouse not fetched. Waffle in the depot is
   still mine to set up when he says go.
